@@ -1,0 +1,20 @@
+{
+  "name": "first-typescript",
+  "version": "1.0.0",
+  "description": "This is my first typescript project I built while learning Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BertrandConxy/First-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BertrandConxy/First-typescript/issues"
+  },
+  "homepage": "https://github.com/BertrandConxy/First-typescript#readme"
+}
