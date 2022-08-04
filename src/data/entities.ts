@@ -11,7 +11,7 @@ export type Product = {
         // no statement required
      }
 
-     get total(): number {
+     get totalAmount(): number {
         return this.product.price * this.quantity;
      }
 
@@ -39,6 +39,16 @@ export class Order {
         this.lines.delete(id);
     }
 
+    public sellProduct(id: number, quantity: number): void {
+        const line = this.lines.get(id);
+        if(line) {
+            line.quantity -= quantity;
+            if(line.quantity <= 0) {
+                this.lines.delete(id);
+            }
+        }
+    }
+
     get orderlines(): OrderLine[] {
         return [...this.lines.values()];
     }
@@ -52,6 +62,6 @@ export class Order {
     }
 
     get totalPrice(): number {
-        return [...this.lines.values()].reduce((total, prod) => total += prod.total,0);
+        return [...this.lines.values()].reduce((total, prod) => total += prod.totalAmount,0);
     }
 }
