@@ -48,6 +48,7 @@ export abstract class AbstractDataSource {
     await this.loading;
     return [...this._categories.values()];
   }
+  
   protected abstract loadProducts(): Promise<Product[]>;
   abstract storeOrder(): Promise<number>;
 }
